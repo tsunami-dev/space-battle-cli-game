@@ -75,4 +75,4 @@ The objective of this lab is to create a simple space battle game where the play
 - Call the `startGame` function with a player name to start the game. For example, `startGame("YourName")`.
 - In your terminal type `node game.js`. You will see the output of your game.
 
-**_Credits: Carlos Godoy_**
+**Credits:** _Carlos Godoy_
