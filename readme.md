@@ -1,5 +1,7 @@
 # Space Battle Game
 
+<img src="./assets/alien-battle.jpg" width="600" height="600">
+
 ## Objective:
 
 The objective of this lab is to create a simple space battle game where the player controls a spaceship and battles against alien ships to save Earth.
