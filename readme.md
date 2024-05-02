@@ -23,17 +23,18 @@ The objective of this lab is to create a simple space battle game where the play
 
 ### Create the Player Class:
 
-1. Start by creating the `Player` class with a constructor that takes a `name` parameter.
+1. Start by creating a constructor for the `Player` class that takes a `name` parameter.
 2. Inside the constructor, initialize `this.hp` to 1000 (hit points), `this.power` to a random number between 50 and 100 (damage), and `this.armor` to a random number between 20 and 40 (armor).
 
 ### Create the AlienShip Class:
 
-1. Next, create the `AlienShip` class with a constructor that initializes `this.hp` to 100 (hit points), `this.power` to a random number between 30 and 60 (damage), and `this.armor` to a random number between 0 and 20 (armor).
+1. Next, create a constructor for the `AlienShip` class that initializes `this.hp` to 100 (hit points), `this.power` to a random number between 30 and 60 (damage), and `this.armor` to a random number between 0 and 20 (armor).
 
 ### Implement Attack Methods for Both Classes:
 
-- In the `Player` class, define an `attack` method that takes a `target` parameter (an instance of `AlienShip`).
+- In the `Player` class, define an `attack` method that takes a `target` parameter (this parameter represents an instance of `AlienShip`).
 - Inside the `attack` method, subtract the damage (`this.power`) minus the target's armor from the target's HP and log the attack result.
+  (e.g. `HIT! You've struck an alien ship! Their current HP is now 25` except the number 25 will be dynamic and not hardcoded)
 
 ### Create the Game Loop and Start Game Function:
 
@@ -44,9 +45,16 @@ The objective of this lab is to create a simple space battle game where the play
 
 ### Implement the Game Loop:
 
-1. Use a `while` loop that runs as long as both the player's HP is above 0 and there are still alien ships (`alienShips.length > 0`).
-2. Inside the loop, determine the current target (`currentTarget`) by accessing the first alien ship in the `alienShips` array.
-3. Alternate between player and alien attacks based on `playersTurn`. Update `playersTurn` after each attack.
+- Create a game loop that runs as long as the player's spaceship has HP and there are still alien ships.
+  - Inside the loop:
+    - Determine the current target (`currentTarget variable`) by accessing the first alien ship in the `alienShips` array.
+    - If it's the player's turn:
+      - Player attacks the current target (`currentTarget`) using the `attack` method.
+    - If it's the alien's turn:
+      - Each alien ship attacks the player's spaceship sequentially.
+    - Update `playersTurn` after each turn.
+    - Check if the current target (`currentTarget`) is defeated (HP <= 0) and remove it from the `alienShips` array.
+    - Check if the player's spaceship HP is <= 0 to end the game loop.
 
 ### Check for Defeated Alien Ships:
 
@@ -68,4 +76,4 @@ The objective of this lab is to create a simple space battle game where the play
 
 Following these steps will help you build a functional space battle game in JavaScript using Object-Oriented Programming principles.
 
-**Credits: Carlos Gody**
+**Credits: Carlos Godoy**

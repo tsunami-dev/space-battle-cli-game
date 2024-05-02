@@ -17,6 +17,6 @@ class AlienShip {}
 // console.log(player1)
 
 // Game Loop so player/enemy can take a turn attacking each other
-const startGame = (name) => {}
+const startGame = () => {}
 
 startGame('Callister')
