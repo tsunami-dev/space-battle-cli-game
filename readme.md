@@ -65,3 +65,5 @@ The objective of this lab is to create a simple space battle game where the play
 - Uncomment the testing code at the end of the provided script to create instances and test the `attack` method of both classes.
 
 Following these steps will help you build a functional space battle game in JavaScript using Object-Oriented Programming principles.
+
+**Credits: Carlos Gody**
