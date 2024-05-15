@@ -12,10 +12,10 @@ const startGame = () => {
 
 
     // Create an animated text effect
-    const rainbow = chalkAnimation.rainbow('Welcome to Space Battle, Player', .8);
+    const gradientText = gradient('red', 'blue')('Welcome to Space Battle');
 
     // Create a gradient effect
-    const gradientText = gradient('red', 'blue')('Welcome to Space Battle');
+    const rainbow = chalkAnimation.rainbow('Welcome to Space Battle, Player', .8);
 
     // Display the gradient text
     console.log(gradientText);
