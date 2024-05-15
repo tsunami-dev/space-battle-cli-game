@@ -36,16 +36,12 @@ The objective of this lab is to create a simple space battle game where the play
 - Inside the `attack` method, subtract the damage (`this.power`) minus the target's armor from the target's HP and log the attack result.
   (e.g. `HIT! You've struck an alien ship! Their current HP is now 25` except the number 25 will be dynamic and not hardcoded)
 
-### Testing (Optional):
-
-- Uncomment the testing code after you've completed both the Player and the Alien class. This is only to test the classes before the statGame function is built. You have the ability to test the `attack` method of both classes. Just run `node game.js` in your terminal.
 
 ### Create the Game Loop and Start Game Function:
 
-1. Define a function named `startGame` that takes the player's name as a parameter.
+1. Define a function named `startGame` that takes the player's name as a parameter and create an instance of the player class using the name that the user entered.
 2. Inside `startGame`, create an array `alienShips` to store instances of `AlienShip` (you can start with, say, 6 alien ships).
-3. Create an instance of `Player` using the provided name parameter.
-4. Initialize a boolean variable `playersTurn` to `true` to track whose turn it is.
+3. Initialize a boolean variable `playersTurn` to `true` to track whose turn it is.
 
 ### Implement the Game Loop:
 
@@ -53,9 +49,9 @@ The objective of this lab is to create a simple space battle game where the play
   - Inside the loop:
     - Determine the current target (`currentTarget variable`) by accessing the first alien ship in the `alienShips` array.
     - If it's the player's turn:
-      - Player attacks the current target (`currentTarget`) using the `attack` method.
+      - Ask the Player what they want to do next: attack, defend, power up.
     - If it's the alien's turn:
-      - Each alien ship attacks the player's spaceship sequentially.
+      - Randomize what the alien will do next. Perhaps 20% chance of a power up, 50% attack, 30% defend.
     - Update `playersTurn` after each turn.
     - Check if the current target (`currentTarget`) is defeated (HP <= 0) and remove it from the `alienShips` array.
     - Check if the player's spaceship HP is <= 0 to end the game loop.
@@ -73,6 +69,4 @@ The objective of this lab is to create a simple space battle game where the play
 ### Run the Game:
 
 - Call the `startGame` function with a player name to start the game. For example, `startGame("YourName")`.
-- In your terminal type `node game.js`. You will see the output of your game.
-
-**Credits:** _Carlos Godoy_
+- In your terminal type `node index.js`. You will see the output of your game.

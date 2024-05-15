@@ -1,6 +1,6 @@
-const figlet = require('figlet')
 const chalk = require('chalk')
 const chalkAnimation = require('chalk-animation');
+const figlet = require('figlet')
 const gradient = require('gradient-string');
 
 
